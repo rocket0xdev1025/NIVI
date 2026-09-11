@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nvidia Mascot ($NIVI) — Green-Chip Meme Power</title>
+  <meta name="description" content="Nvidia Mascot brings green-chip energy, tech vibes, and unstoppable meme power straight to the blockchain. Buy $NIVI on Solana." />
+  <meta property="og:title" content="Nvidia Mascot ($NIVI)" />
+  <meta property="og:description" content="Green-chip energy, tech vibes, and unstoppable meme power on Solana." />
+  <meta property="og:image" content="banner.png" />
+  <meta name="theme-color" content="#76B900" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nv: {
+              lime: "#B6FF2A",
+              green: "#76B900",
+              deep: "#3D6B00",
+              yellow: "#FFCC00",
+              ink: "#020403",
+              panel: "#07110A",
+              line: "#1A3A12"
+            }
+          },
+          fontFamily: {
+            display: ["Orbitron", "sans-serif"],
+            body: ["Rajdhani", "sans-serif"],
+            mono: ["Share Tech Mono", "ui-monospace", "monospace"]
+          },
+          dropShadow: {
+            glow: "0 0 24px rgba(118,185,0,0.65)",
+            mascot: "0 18px 50px rgba(118,185,0,0.35)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --nv: #76B900;
+      --lime: #B6FF2A;
+      --ca: "TBA";
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #020403;
+      color: #E8FFC8;
+      font-family: Rajdhani, sans-serif;
+    }
+
+    .nv-grid {
+      background-color: #020403;
+      background-image:
+        linear-gradient(rgba(118, 185, 0, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(118, 185, 0, 0.07) 1px, transparent 1px),
+        radial-gradient(ellipse 80% 55% at 50% -10%, rgba(118, 185, 0, 0.28), transparent 58%),
+        radial-gradient(ellipse 50% 40% at 90% 20%, rgba(182, 255, 42, 0.08), transparent 50%),
+        radial-gradient(ellipse 40% 50% at 8% 80%, rgba(118, 185, 0, 0.12), transparent 55%);
+      background-size: 56px 56px, 56px 56px, auto, auto, auto;
+    }
+
+    .scanlines::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 2px,
+        rgba(0, 0, 0, 0.12) 3px,
+        rgba(0, 0, 0, 0.12) 4px
+      );
+      opacity: 0.35;
+    }
+
+    .clip-chip {
+      clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+    }
+
+    .clip-btn {
+      clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    }
+
+    .glow-border {
+      box-shadow:
+        0 0 0 1px rgba(118, 185, 0, 0.55),
+        0 0 28px rgba(118, 185, 0, 0.18),
+        inset 0 0 40px rgba(118, 185, 0, 0.05);
+    }
+
+    .mascot-orb {
+      animation: float 5.5s ease-in-out infinite;
+      filter: drop-shadow(0 20px 40px rgba(118, 185, 0, 0.45));
+    }
+
+    .ring-spin {
+      animation: spin 22s linear infinite;
+    }
+
+    .ring-spin-rev {
+      animation: spin 16s linear infinite reverse;
+    }
+
+    .pulse-core {
+      animation: pulseGlow 2.6s ease-in-out infinite;
+    }
+
+    .marquee-track {
+      animation: marquee 26s linear infinite;
+    }
+
+    .laser {
+      animation: laser 7s linear infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.08); }
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes laser {
+      0% { transform: translateX(-120%); opacity: 0; }
+      12% { opacity: 1; }
+      100% { transform: translateX(220%); opacity: 0; }
+    }
+
+    .step-num {
+      background: linear-gradient(180deg, #D8FF6A 0%, #76B900 55%, #3D6B00 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .title-grad {
+      background: linear-gradient(92deg, #F5FFE0 0%, #B6FF2A 38%, #76B900 72%, #FFCC00 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    iframe { color-scheme: dark; }
+  </style>
+</head>
+<body class="nv-grid scanlines overflow-x-hidden">
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div class="laser absolute top-24 h-px w-1/2 bg-gradient-to-r from-transparent via-nv-lime to-transparent opacity-70"></div>
+    <div class="absolute -left-24 top-40 h-72 w-72 rounded-full bg-nv-green/20 blur-3xl"></div>
+    <div class="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-nv-lime/10 blur-3xl"></div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-nv-green/30 bg-nv-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="relative grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-black glow-border">
+          <img src="logo.png" alt="Nvidia Mascot logo" class="h-11 w-11 object-contain" />
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-sm font-extrabold tracking-[0.18em] text-nv-lime md:text-base">NVIDIA MASCOT</span>
+          <span class="font-mono text-xs tracking-widest text-nv-green">$NIVI</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-7 font-display text-xs font-bold tracking-[0.22em] text-nv-lime/80 md:flex">
+        <a href="#about" class="transition hover:text-white">ABOUT</a>
+        <a href="#howto" class="transition hover:text-white">HOW TO BUY</a>
+        <a href="#chart" class="transition hover:text-white">CHART</a>
+        <a href="https://x.com/NvidiaMascotX" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">X</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="https://x.com/NvidiaMascotX" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-nv-green/50 bg-black" aria-label="Nvidia Mascot on X">
+          <img src="x.png" alt="X" class="h-6 w-6 object-contain" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="clip-btn hidden bg-nv-green px-5 py-2.5 font-display text-xs font-extrabold tracking-widest text-black shadow-[0_0_24px_rgba(118,185,0,0.45)] transition hover:bg-nv-lime sm:inline-block">
+          BUY NOW
+        </a>
+        <button id="menuBtn" class="grid h-10 w-10 place-items-center border border-nv-green/50 text-nv-lime md:hidden" aria-label="Open menu">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="hidden border-t border-nv-green/20 bg-nv-ink px-4 py-4 md:hidden">
+      <div class="flex flex-col gap-3 font-display text-sm font-bold tracking-[0.2em] text-nv-lime">
+        <a href="#about">ABOUT</a>
+        <a href="#howto">HOW TO BUY</a>
+        <a href="#chart">CHART</a>
+        <a href="https://x.com/NvidiaMascotX" target="_blank" rel="noopener noreferrer">X / TWITTER</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="clip-btn bg-nv-green px-4 py-3 text-center text-black">BUY NOW</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 lg:grid-cols-2 lg:pt-16">
+      <div>
+        <div class="mb-5 inline-flex items-center gap-2 border border-nv-green/40 bg-nv-green/10 px-3 py-1 font-mono text-[11px] tracking-[0.28em] text-nv-lime">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-nv-lime"></span>
+          SOLANA MEME CLUSTER // LIVE
+        </div>
+        <h1 class="font-display text-4xl font-black italic leading-[0.92] tracking-tight sm:text-6xl lg:text-7xl">
+          <span class="block text-white">NVIDIA</span>
+          <span class="title-grad block">MASCOT</span>
+        </h1>
+        <p class="mt-3 font-display text-2xl font-extrabold italic tracking-[0.35em] text-nv-green sm:text-3xl">$NIVI</p>
+        <p class="mt-6 max-w-xl text-lg font-semibold leading-relaxed text-nv-lime/90 sm:text-xl">
+          Nvidia Mascot brings green-chip energy, tech vibes, and unstoppable meme power straight to the blockchain.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" id="buyNow" target="_blank" rel="noopener noreferrer" class="clip-btn bg-nv-green px-8 py-3.5 font-display text-sm font-extrabold tracking-[0.2em] text-black shadow-[0_0_32px_rgba(118,185,0,0.5)] transition hover:bg-nv-lime hover:shadow-[0_0_48px_rgba(182,255,42,0.55)]">
+            BUY NOW
+          </a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="clip-btn border border-nv-green bg-black/40 px-8 py-3.5 font-display text-sm font-extrabold tracking-[0.2em] text-nv-lime transition hover:bg-nv-green/15">
+            CHART
+          </a>
+        </div>
+
+        <div class="mt-6 flex max-w-xl items-center gap-2 glow-border clip-chip bg-black/70 px-3 py-2.5">
+          <span class="shrink-0 font-mono text-[11px] tracking-widest text-nv-green">CA</span>
+          <code id="caText" class="min-w-0 flex-1 truncate font-mono text-sm text-nv-lime">TBA</code>
+          <button id="copyCa" class="clip-btn shrink-0 bg-nv-green px-3 py-1.5 font-display text-[11px] font-extrabold tracking-widest text-black hover:bg-nv-lime">
+            COPY
+          </button>
+        </div>
+        <p id="copyMsg" class="mt-2 h-5 font-mono text-xs tracking-widest text-nv-yellow opacity-0 transition">CA COPIED TO CLIPBOARD</p>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-lg">
+        <div class="pulse-core absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-nv-green/30 blur-3xl"></div>
+        <svg class="ring-spin absolute left-1/2 top-1/2 h-[118%] w-[118%] -translate-x-1/2 -translate-y-1/2 text-nv-green/40" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="0.6" stroke-dasharray="6 10" />
+          <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="0.4" stroke-dasharray="2 8" />
+        </svg>
+        <svg class="ring-spin-rev absolute left-1/2 top-1/2 h-[100%] w-[100%] -translate-x-1/2 -translate-y-1/2 text-nv-lime/30" viewBox="0 0 200 200" fill="none">
+          <rect x="18" y="18" width="164" height="164" stroke="currentColor" stroke-width="0.5" />
+        </svg>
+        <img src="logo.png" alt="Nvidia Mascot" class="mascot-orb relative z-10 mx-auto w-[78%] max-w-md object-contain" />
+      </div>
+    </section>
+
+    <div class="relative overflow-hidden border-y border-nv-green/30 bg-nv-green">
+      <div class="marquee-track flex w-max gap-10 whitespace-nowrap py-2.5 font-display text-xs font-extrabold tracking-[0.35em] text-black">
+        <span>NVIDIA MASCOT &nbsp;•&nbsp; $NIVI &nbsp;•&nbsp; GREEN-CHIP ENERGY &nbsp;•&nbsp; TECH VIBES &nbsp;•&nbsp; UNSTOPPABLE MEME POWER &nbsp;•&nbsp; SOLANA &nbsp;•&nbsp;</span>
+        <span>NVIDIA MASCOT &nbsp;•&nbsp; $NIVI &nbsp;•&nbsp; GREEN-CHIP ENERGY &nbsp;•&nbsp; TECH VIBES &nbsp;•&nbsp; UNSTOPPABLE MEME POWER &nbsp;•&nbsp; SOLANA &nbsp;•&nbsp;</span>
+      </div>
+    </div>
+
+    <section class="relative mx-auto max-w-7xl px-4 py-12">
+      <div class="clip-chip overflow-hidden glow-border">
+        <img src="banner.png" alt="Nvidia Mascot NIVI banner" class="h-auto w-full object-cover" />
+      </div>
+    </section>
+
+    <section id="about" class="relative mx-auto max-w-7xl px-4 pb-20">
+      <p class="font-mono text-xs tracking-[0.4em] text-nv-green">01 // PROTOCOL</p>
+      <h2 class="mt-2 font-display text-3xl font-black italic text-white sm:text-5xl">THE GREEN CHIP IS ALIVE.</h2>
+      <p class="mt-5 max-w-3xl text-lg font-semibold leading-relaxed text-nv-lime/85">
+        Nvidia Mascot brings green-chip energy, tech vibes, and unstoppable meme power straight to the blockchain.
+        $NIVI is the mascot of the cluster — a lime-lit legend with GPU swagger, golden frames, and zero chill.
+      </p>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <article class="clip-chip glow-border bg-black/55 p-6">
+          <p class="font-display text-xs tracking-[0.3em] text-nv-yellow">CORE 01</p>
+          <h3 class="mt-2 font-display text-xl font-extrabold italic text-nv-lime">GREEN-CHIP ENERGY</h3>
+          <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Born from neon silicon and overclocked jokes. $NIVI runs hot, looks louder, and never thermal-throttles the vibe.</p>
+        </article>
+        <article class="clip-chip glow-border bg-black/55 p-6">
+          <p class="font-display text-xs tracking-[0.3em] text-nv-yellow">CORE 02</p>
+          <h3 class="mt-2 font-display text-xl font-extrabold italic text-nv-lime">TECH VIBES</h3>
+          <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Circuit-city aesthetics, RTX-era swagger, and a mascot that stares into the future through gold-rimmed lenses.</p>
+        </article>
+        <article class="clip-chip glow-border bg-black/55 p-6">
+          <p class="font-display text-xs tracking-[0.3em] text-nv-yellow">CORE 03</p>
+          <h3 class="mt-2 font-display text-xl font-extrabold italic text-nv-lime">MEME POWER</h3>
+          <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Unstoppable community hash rate. One mascot, one ticker, infinite screenshots. Load $NIVI. Render chaos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="howto" class="relative border-y border-nv-green/25 bg-black/40 py-20">
+      <div class="mx-auto max-w-7xl px-4">
+        <p class="font-mono text-xs tracking-[0.4em] text-nv-green">02 // INSTALL DRIVER</p>
+        <h2 class="mt-2 font-display text-3xl font-black italic text-white sm:text-5xl">HOW TO BUY $NIVI</h2>
+        <p class="mt-4 max-w-2xl text-lg font-semibold text-nv-lime/80">Four steps. Robinhood ETH in, Solana meme out. Welcome to the cluster.</p>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <article class="clip-chip glow-border relative bg-nv-panel/90 p-6">
+            <span class="step-num font-display text-5xl font-black italic">01</span>
+            <h3 class="mt-3 font-display text-lg font-extrabold italic text-nv-lime">GET A SOLANA WALLET</h3>
+            <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Install Phantom or Solflare and create a wallet. This is your GPU bay — keep the seed phrase offline and locked.</p>
+          </article>
+          <article class="clip-chip glow-border relative bg-nv-panel/90 p-6">
+            <span class="step-num font-display text-5xl font-black italic">02</span>
+            <h3 class="mt-3 font-display text-lg font-extrabold italic text-nv-lime">BUY ETH ON ROBINHOOD</h3>
+            <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Open Robinhood, buy Ethereum (ETH), and enable crypto withdrawals. Green-chip energy starts with a simple tap.</p>
+          </article>
+          <article class="clip-chip glow-border relative bg-nv-panel/90 p-6">
+            <span class="step-num font-display text-5xl font-black italic">03</span>
+            <h3 class="mt-3 font-display text-lg font-extrabold italic text-nv-lime">SEND ETH &amp; GET SOL</h3>
+            <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Withdraw ETH from Robinhood to a wallet or exchange that can swap/bridge into Solana (SOL). Fuel the chain.</p>
+          </article>
+          <article class="clip-chip glow-border relative bg-nv-panel/90 p-6">
+            <span class="step-num font-display text-5xl font-black italic">04</span>
+            <h3 class="mt-3 font-display text-lg font-extrabold italic text-nv-lime">SWAP SOL FOR $NIVI</h3>
+            <p class="mt-3 text-base font-medium leading-relaxed text-nv-lime/75">Hit Buy Now, connect your wallet on Pump.fun, and swap SOL into $NIVI. Render complete.</p>
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="mt-5 inline-block font-display text-xs font-extrabold tracking-[0.2em] text-nv-yellow underline decoration-nv-yellow/40 underline-offset-4 hover:text-white">
+              OPEN BUY NOW →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="chart" class="relative mx-auto max-w-7xl px-4 py-20">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="font-mono text-xs tracking-[0.4em] text-nv-green">03 // TELEMETRY</p>
+          <h2 class="mt-2 font-display text-3xl font-black italic text-white sm:text-5xl">LIVE CHART</h2>
+        </div>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="clip-btn border border-nv-green px-5 py-2.5 font-display text-xs font-extrabold tracking-[0.2em] text-nv-lime hover:bg-nv-green/15">
+          OPEN DEXSCREENER
+        </a>
+      </div>
+      <div class="mt-8 overflow-hidden glow-border clip-chip bg-black">
+        <iframe
+          title="Dexscreener NIVI chart"
+          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          class="h-[520px] w-full border-0 bg-black"
+          allow="clipboard-write"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="community" class="relative border-t border-nv-green/25 py-20">
+      <div class="mx-auto max-w-7xl px-4 text-center">
+        <p class="font-mono text-xs tracking-[0.4em] text-nv-green">04 // CLUSTER</p>
+        <h2 class="mt-2 font-display text-3xl font-black italic text-white sm:text-5xl">JOIN THE MASCOT</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg font-semibold text-nv-lime/80">Follow the feed. Copy the CA. Overclock the timeline.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="https://x.com/NvidiaMascotX" target="_blank" rel="noopener noreferrer" class="clip-btn inline-flex items-center gap-3 border border-nv-green bg-black px-6 py-3 font-display text-sm font-extrabold tracking-[0.18em] text-nv-lime hover:bg-nv-green/15">
+            <img src="x.png" alt="" class="h-5 w-5 object-contain" />
+            @NvidiaMascotX
+          </a>
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="clip-btn bg-nv-green px-6 py-3 font-display text-sm font-extrabold tracking-[0.18em] text-black hover:bg-nv-lime">
+            BUY $NIVI
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-nv-green/30 bg-black/80 py-10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 md:flex-row">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-10 w-10 object-contain" />
+        <p class="font-display text-sm font-bold tracking-[0.2em] text-nv-lime">NVIDIA MASCOT <span class="text-nv-green">$NIVI</span></p>
+      </div>
+      <p class="max-w-xl text-center font-body text-sm font-medium text-nv-lime/45 md:text-right">
+        $NIVI is a community meme token on Solana and is not affiliated with NVIDIA Corporation. Crypto is volatile. DYOR.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const CA = "TBA";
+    const BUY_URL = "https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA";
+
+    document.getElementById("buyNow").setAttribute("href", BUY_URL);
+
+    document.getElementById("menuBtn").addEventListener("click", () => {
+      document.getElementById("mobileNav").classList.toggle("hidden");
+    });
+
+    document.getElementById("copyCa").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(CA);
+      } catch {
+        const area = document.createElement("textarea");
+        area.value = CA;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+      }
+      const msg = document.getElementById("copyMsg");
+      msg.classList.remove("opacity-0");
+      setTimeout(() => msg.classList.add("opacity-0"), 1800);
+    });
+  </script>
+</body>
+</html>
